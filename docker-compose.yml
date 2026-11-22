@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  quant-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quant-trading-alpha-platform
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data
+    restart: "no"
